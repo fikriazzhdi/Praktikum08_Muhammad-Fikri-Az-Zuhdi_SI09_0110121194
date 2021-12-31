@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        img {
+            width: 25%;
+            border: black 1px solid;
+        }
+    </style>
+
+    <script>
+        function hewan(){
+            let nama_hewan = document.getElementById("pilihewan");
+            let urutan = nama_hewan.selectedIndex;
+            let gambar = document.getElementById("gambar_hewan");
+            gambar.src ="gambar/"+nama_hewan[urutan].value+".jpg";
+        }
+    </script>
+</head>
+<body>
+    <form id="frm1">
+     Choose Your Fighter : <select name="" id="pilihewan" onchange="hewan()">
+            <option value="angsa">Angsa</option>
+            <option value="ayam">Ayam</option>
+            <option value="badak">Badak</option>
+            <option value="kelinci">Kelinci</option>
+            <option value="gajah">Gajah</option>
+            <option value="kupu2">Kupu - Kupu</option>
+        </select>
+    </form>
+    <br>
+    <img src="gambar/angsa.jpg" alt="Angsa Nih Boss" id="gambar_hewan">
+</body>
+</html>
